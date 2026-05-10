@@ -1,0 +1,117 @@
+.note-item {
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.76), rgba(255, 250, 242, 0.84));
+  border: 1px solid rgba(228, 219, 207, 0.9);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(8px);
+  transition:
+    transform var(--speed-base) var(--ease-premium),
+    box-shadow var(--speed-base) var(--ease-premium),
+    border-color var(--speed-base) var(--ease-premium);
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+
+.note-item.high {
+  background: linear-gradient(145deg, rgba(252, 229, 225, 0.92), rgba(248, 214, 206, 0.88));
+}
+
+.note-item.medium {
+  background: linear-gradient(145deg, rgba(251, 240, 224, 0.92), rgba(246, 226, 198, 0.88));
+}
+
+.note-item.low {
+  background: linear-gradient(145deg, rgba(230, 243, 235, 0.92), rgba(211, 233, 222, 0.88));
+}
+
+.note-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.note-header h3 {
+  margin: 0;
+}
+
+.priority-badge {
+  font-size: 0.78rem;
+  padding: 5px 10px;
+  border-radius: 99px;
+  font-weight: 700;
+}
+
+.priority-badge.low {
+  background: #e2f0e9;
+  color: #245548;
+}
+
+.priority-badge.medium {
+  background: #f5e6d6;
+  color: #8e5633;
+}
+
+.priority-badge.high {
+  background: #f7ddd8;
+  color: #8a2f24;
+}
+
+.note-date {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: right;
+  align-self: flex-end;
+}
+
+.note-content {
+  margin: 0;
+  line-height: 1.5;
+  color: #3e372f;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.note-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(216, 204, 187, 0.55);
+}
+
+.note-actions button {
+  border: none;
+  border-radius: 11px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform var(--speed-fast) var(--ease-premium), box-shadow var(--speed-fast) var(--ease-premium);
+}
+
+.note-actions button:first-child {
+  background: #e8f1ee;
+  color: #2f5f53;
+}
+
+.note-actions button:hover {
+  transform: translateY(-1px);
+}
+
+.note-actions .danger {
+  background: linear-gradient(135deg, #a24a3c, #8a3629);
+  color: white;
+}
+
+.note-actions .danger:hover {
+  background: var(--danger-dark);
+}

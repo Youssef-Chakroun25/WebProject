@@ -1,0 +1,27 @@
+.alert-message {
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  box-shadow: 0 8px 18px rgba(94, 75, 58, 0.08);
+  animation: fadeUp var(--speed-base) var(--ease-premium);
+}
+
+.alert-message.success {
+  background: var(--success-bg);
+  color: var(--success-text);
+  border-color: #bad9cb;
+}
+
+.alert-message.error {
+  background: var(--error-bg);
+  color: var(--error-text);
+  border-color: #efc0b8;
+}
+
+.alert-message.info {
+  background: var(--info-bg);
+  color: var(--info-text);
+  border-color: #c2dad2;
+}

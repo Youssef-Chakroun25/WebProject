@@ -1,0 +1,120 @@
+.notes-page {
+  min-height: 100vh;
+  padding: 26px 22px 32px;
+  animation: fadeUp var(--speed-slow) var(--ease-premium);
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(228, 219, 207, 0.85);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(255, 250, 242, 0.75));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+}
+
+.welcome-line {
+  margin: 0;
+  color: var(--muted);
+}
+
+.notes-header h1 {
+  margin: 3px 0 0;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+}
+
+.logout-button {
+  border: none;
+  border-radius: 13px;
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #355d54, #2c5249);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(47, 95, 83, 0.22);
+  transition: transform var(--speed-base) var(--ease-premium), box-shadow var(--speed-base) var(--ease-premium);
+}
+
+.logout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(47, 95, 83, 0.28);
+}
+
+.notes-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.left-panel,
+.right-panel {
+  min-width: 0;
+}
+
+.right-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.list-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.72), rgba(255, 250, 242, 0.8));
+  border: 1px solid rgba(228, 219, 207, 0.88);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(8px);
+}
+
+.list-toolbar h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.list-toolbar select {
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  padding: 8px 10px;
+  background: rgba(255, 252, 246, 0.86);
+  transition: border-color var(--speed-fast) var(--ease-premium), box-shadow var(--speed-fast) var(--ease-premium);
+}
+
+.list-toolbar select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(47, 95, 83, 0.12);
+}
+
+.filter-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-box label {
+  font-size: 0.92rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 950px) {
+  .notes-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .notes-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

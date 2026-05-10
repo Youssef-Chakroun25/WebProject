@@ -1,0 +1,128 @@
+:root {
+  --bg: #f7f4ef;
+  --bg-2: #faf6f0;
+  --bg-3: #f4eee4;
+  --panel: #fffdf9;
+  --panel-strong: #fffaf3;
+  --text: #2f2a24;
+  --muted: #6e665d;
+  --title: #26221d;
+  --primary: #2f5f53;
+  --primary-dark: #264e45;
+  --accent-warm: rgba(217, 135, 82, 0.2);
+  --accent-cool: rgba(47, 95, 83, 0.22);
+  --border: #e4dbcf;
+  --border-strong: #d8ccbb;
+  --danger: #9e3b2f;
+  --danger-dark: #852f24;
+  --success-bg: #ecf7f2;
+  --success-text: #1f5a4d;
+  --error-bg: #fdf1ee;
+  --error-text: #8a2f24;
+  --info-bg: #eef5f3;
+  --info-text: #2f5f53;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --shadow-sm: 0 8px 20px rgba(98, 76, 57, 0.08);
+  --shadow-md: 0 18px 36px rgba(98, 76, 57, 0.12);
+  --shadow-lg: 0 30px 60px rgba(98, 76, 57, 0.18);
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --speed-fast: 180ms;
+  --speed-base: 280ms;
+  --speed-slow: 420ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    radial-gradient(circle at 12% 10%, var(--accent-warm) 0%, rgba(217, 135, 82, 0) 42%),
+    radial-gradient(circle at 88% 84%, var(--accent-cool) 0%, rgba(47, 95, 83, 0) 44%),
+    linear-gradient(145deg, #faf6f0 0%, #f4eee4 100%);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--speed-fast) var(--ease-premium);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title);
+  letter-spacing: -0.02em;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(47, 95, 83, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(47, 95, 83, 0);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 252, 246, 0.7);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d9b49a 0%, #8ea79f 100%);
+  border-radius: 999px;
+  border: 2px solid rgba(255, 250, 243, 0.85);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #cc9f81 0%, #6f8f85 100%);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #9a8f82 rgba(255, 252, 246, 0.7);
+}
